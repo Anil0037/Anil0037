@@ -1,0 +1,359 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "01148e99-3a64-4fa3-85a1-3107457eaf97",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "108ac7f0-e3b4-404d-865c-2ddb663e859d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#dir(np)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "0bf73321-c224-46f4-b5d2-06271ae105e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[45 67 57 60]\n",
+      "<class 'numpy.ndarray'>\n",
+      "int32\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = np.array([45,67,57,60])\n",
+    "print(x)\n",
+    "print(type(x))\n",
+    "print(x.dtype)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "7b42da78-a05f-4a26-bd85-eb46ad203d9f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[45.  67.  57.   9.8]\n",
+      "<class 'numpy.ndarray'>\n",
+      "float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = np.array([45,67,57,9.8])\n",
+    "print(x)\n",
+    "print(type(x))\n",
+    "print(x.dtype)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "76d57ba2-af7e-498f-921a-fcf0e18c226c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['A' '67' '57' '9.8']\n",
+      "<class 'numpy.ndarray'>\n",
+      "<U32\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = np.array([\"A\",67,57,9.8])\n",
+    "print(x)\n",
+    "print(type(x))\n",
+    "print(x.dtype)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "fe8adc8a-7892-4936-b1f0-e99466fd9ee1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[20 40]\n",
+      " [30 60]]\n",
+      "<class 'numpy.ndarray'>\n",
+      "(2, 2)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create a 2D array\n",
+    "a2 = np.array([[20,40],[30,60]])\n",
+    "print(a2)\n",
+    "print(type(a2))\n",
+    "print(a2.shape)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "e518397f-7a25-453f-a236-e73c048a799f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[10 20]\n",
+      " [30 40]]\n",
+      "(2, 2)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Reshapig an array\n",
+    "a = np.array([10,20,30,40])\n",
+    "b = a.reshape(2,2)\n",
+    "print(b)\n",
+    "print(b.shape)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "3479fcbc-19eb-47ff-9c4d-427c2d020bb6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[3 4 5 6 7 8 9]\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "numpy.ndarray"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Create an array with arange()\n",
+    "c = np.arange(3,10)\n",
+    "print(c)\n",
+    "type(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "b4e2be4b-883a-48c3-809e-701409afb3aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1.3467  3.10987 4.91236]\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "array([1.35, 3.11, 4.91])"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Use of around()\n",
+    "d = np.array([1.3467,3.10987,4.91236])\n",
+    "print(d)\n",
+    "np.around(d,2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "e6de772f-87f3-481e-93c6-79018acbe6c5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1.3467  3.10987 4.912  ]\n",
+      "[1.16 1.76 2.22]\n"
+     ]
+    }
+   ],
+   "source": [
+    "d = np.array([1.3467,3.10987,4.912])\n",
+    "print(d)\n",
+    "print(np.around(np.sqrt(d),2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "f03beba6-a491-4fb2-b627-bf8daaf3b2d8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 3.  4.  5.  8.]\n",
+      " [ 7.  2.  8. nan]]\n",
+      "(2, 4)\n",
+      "float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "a1 = np.array([[3,4,5,8],[7,2,8, np.NAN]])\n",
+    "print(a1)\n",
+    "print(a1.shape)\n",
+    "print(a1.dtype)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "d3bacaaf-7ef9-4289-b9f1-9dad55661244",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['3.0' '4.0' '5.0' '8.0']\n",
+      " ['7.0' '2.0' '8.0' 'nan']]\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "dtype('<U32')"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a1_copy1 = a1.astype(str)\n",
+    "print(a1_copy1)\n",
+    "a1_copy1.dtype"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "8ef9807f-9e88-4b28-99ea-f7afc90c2153",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 3,  4,  6],\n",
+       "       [ 7,  9, 10],\n",
+       "       [ 4,  6, 12]])"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a2 =np.array([[3,4,6,],[7,9,10],[4,6,12]])\n",
+    "a2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "ac5f3f3f-bf96-4dc2-89c2-be963392e965",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[3 4 5]\n",
+      " [7 2 8]\n",
+      " [9 1 6]]\n",
+      "[[0 4 5]\n",
+      " [7 0 8]\n",
+      " [9 1 0]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "a3 = np.array([[3,4,5],[7,2,8],[9,1,6]])\n",
+    "print(a3)\n",
+    "np.fill_diagonal(a3,0)\n",
+    "print(a3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7219d06e-5009-4e81-b354-83c40dffb984",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
